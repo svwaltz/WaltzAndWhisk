@@ -1,0 +1,38 @@
+# VS & VS Code
+.vs/
+.vscode/
+
+# build outputs
+bin/
+obj/
+
+# user-specific files
+*.user
+*.suo
+
+# Rider
+.idea/
+
+# publish folder
+publish/
+
+# EF Core migration snapshots
+**/Migrations/**/ModelSnapshot.cs
+
+# SQLite DB (optional - ignore if you don’t want local DB in git)
+*.db
+
+# logs
+*.log
+
+# sensitive config
+appsettings.*.json
+
+# npm (if used)
+node_modules/
+
+# macOS
+.DS_Store
+
+# env files
+*.env
