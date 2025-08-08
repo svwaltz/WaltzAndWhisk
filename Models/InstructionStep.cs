@@ -1,12 +1,12 @@
 namespace WaltzAndWhisk.Models
 {
-    public class Ingredient
+    public class InstructionStep
     {
         public int Id { get; set; }
         public int RecipeSectionId { get; set; }
         public RecipeSection RecipeSection { get; set; }
 
-        public string Name { get; set; }
-        public string Quantity { get; set; }
+        public int StepNumber { get; set; }
+        public string Description { get; set; }
     }
 }
