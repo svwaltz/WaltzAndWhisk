@@ -1,3 +1,6 @@
+using System;
+
+namespace WaltzAndWhisk.Models;
 public class Recipe
 {
     public int Id { get; set; }

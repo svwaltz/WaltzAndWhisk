@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WaltzAndWhisk")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b6e96cffa3161b4efc62d0bb591de9a2afa2e5b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+708197740061c887f01e2db15d989b905a50efe6")]
 [assembly: System.Reflection.AssemblyProductAttribute("WaltzAndWhisk")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WaltzAndWhisk")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
