@@ -22,7 +22,6 @@
 /Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
 /Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/scopedcss/bundle/WaltzAndWhisk.styles.css
 /Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/scopedcss/projectbundle/WaltzAndWhisk.bundle.scp.css
-/Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/compressed/d3j2l2ze8x-b9sayid5wm.gz
 /Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/compressed/u84gcgeiuo-61n19gt1b8.gz
 /Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/compressed/vm1vfm7vlg-xtxxf3hu2r.gz
 /Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/compressed/ogo37h9nhq-bqjiyaj88i.gz
@@ -229,3 +228,5 @@
 /Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/bin/Debug/net9.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
 /Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/WaltzAndWhisk.csproj.AssemblyReference.cache
 /Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/WaltzAnd.E6CC999F.Up2Date
+/Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/compressed/d3j2l2ze8x-b9sayid5wm.gz
+/Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/compressed/jpxq80liac-3cxswln3nr.gz

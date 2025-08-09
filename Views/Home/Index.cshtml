@@ -18,10 +18,9 @@
         @foreach (var recipe in Model.FeaturedRecipes)
         {
             <div class="recipe-card">
-                <img src="@recipe.ImageUrl" alt="@recipe.Title" />
-                <h3>@recipe.Title</h3>
+                <img src="@recipe.ImageUrl" alt="@recipe.Title" class="featured-recipe" />
+                <a href="/Recipes/Details/@recipe.Id" > <h3>@recipe.Title</h3> </a>
                 <p>@recipe.Description</p>
-                <a href="/Recipes/Details/@recipe.Id">view recipe</a>
             </div>
         }
     </div>
@@ -34,7 +33,7 @@
         @foreach (var recipe in Model.LatestRecipes)
         {
             <li>
-                <a href="/Recipes/Details/@recipe.Id">@recipe.Title</a> - @recipe.CreatedDate.ToShortDateString()
+                <a href="/Recipes/Details/@recipe.Id">@recipe.Title</a> - @recipe.CreatedAt.ToShortDateString()
             </li>
         }
     </ul>
