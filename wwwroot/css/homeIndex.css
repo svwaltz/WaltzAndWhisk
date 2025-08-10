@@ -1,0 +1,33 @@
+/* FEATURED RECIPES SECTION */
+div.recipe-card {
+  display: flex;
+  align-items: flex-start; /* align top edges */
+  gap: 1rem; /* space between image and text */
+  margin-bottom: 40px; /* space between recipe cards */
+}
+
+img.recipe-card-image {
+  width: 150px; /* control image size */
+  height: auto;
+  flex-shrink: 0; /* don't let image shrink */
+  border-radius: 8px; /* optional rounded corners */
+}
+
+.recipe-card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.recipe-card-content a {
+    text-decoration: none;
+    color: black; /* theme color for title link */
+}
+
+.recipe-card-content a:hover {
+    color: #D96851; /* hover color */
+}
+
+.recipe-card-content p {
+    margin: 0.5rem 0 0; /* small gap under title */
+    color: #555; /* muted paragraph text */
+}

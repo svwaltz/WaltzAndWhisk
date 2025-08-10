@@ -83,8 +83,6 @@
 /Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/compressed/li6kxm2dk4-muycvpuwrr.gz
 /Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/compressed/ko86ln6hxc-87fc7y1x7t.gz
 /Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/compressed/z2utp060kj-mlv21k5csn.gz
-/Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/compressed/uypgvlzj34-pezwlt6fyw.gz
-/Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/compressed/5swm567ffi-pezwlt6fyw.gz
 /Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/staticwebassets.build.json
 /Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/staticwebassets.build.json.cache
 /Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/staticwebassets.development.json
@@ -228,5 +226,7 @@
 /Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/bin/Debug/net9.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
 /Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/WaltzAndWhisk.csproj.AssemblyReference.cache
 /Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/WaltzAnd.E6CC999F.Up2Date
-/Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/compressed/d3j2l2ze8x-b9sayid5wm.gz
-/Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/compressed/jpxq80liac-3cxswln3nr.gz
+/Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/compressed/8dnyr56fjn-0o3qp3bdym.gz
+/Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/compressed/g0gsm32dh1-3cxswln3nr.gz
+/Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/compressed/uypgvlzj34-jrol489wtq.gz
+/Users/sarahwaltz/Library/Mobile Documents/com~apple~CloudDocs/Documents/Personal Project/WaltzAndWhisk/WaltzAndWhisk/obj/Debug/net9.0/compressed/5swm567ffi-jrol489wtq.gz

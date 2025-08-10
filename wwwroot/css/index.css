@@ -1,9 +1,0 @@
-img.featured-recipe {
-  max-width: 30%;  /* scale down if container is smaller */
-  height: auto;     /* keep aspect ratio */
-  display: block;   /* avoid inline gap */
-}
-
-div.recipe-card {
-  margin-bottom: 40px; /* space between recipe cards */
-}

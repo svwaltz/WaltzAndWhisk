@@ -1,4 +1,5 @@
-html {
+html, body {
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
 }
 
@@ -15,6 +16,16 @@ html {
 html {
   position: relative;
   min-height: 100%;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #759B87;
+  border: none;
+}
+
+a {
+  color: #759B87;
 }
 
 body {

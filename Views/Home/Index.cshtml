@@ -2,35 +2,35 @@
     ViewData["Title"] = "Home - Waltz and Whisk"; // title that appears in browser tab
 }
 
-<!-- Hero (big main) section -->
+@* Hero (big main) section *@
 <section class="hero">
-    <h1>Waltz and Whisk</h1>
-    <p>a dance of flavors and stories from my kitchen to yours</p>
     <!-- button linking to all recipes page -->
     <a asp-controller="Recipes" asp-action="Index" class="btn btn-primary">Browse Recipes</a>
 </section>
 
-<!-- Featured recipes -->
+@* Featured recipes *@
 <section class="featured">
-    <h2>Featured Recipes</h2>
+    <h1>Featured Recipes</h1>
     <div class="recipe-grid">
         @* loop through each recipe in the FeaturedRecipes list passed from controller *@
         @foreach (var recipe in Model.FeaturedRecipes)
         {
             <div class="recipe-card">
-                <img src="@recipe.ImageUrl" alt="@recipe.Title" class="featured-recipe" />
-                <a asp-controller="Recipes" asp-action="Details" asp-route-id="@recipe.Id">
-                    <h3>@recipe.Title</h3>
-                </a>
-                <p>@recipe.Description</p>
+                <img src="@recipe.ImageUrl" alt="@recipe.Title" class="recipe-card-image" />
+                <div class="recipe-card-content">
+                    <a asp-controller="Recipes" asp-action="Details" asp-route-id="@recipe.Id">
+                        <h3>@recipe.Title</h3>
+                    </a>
+                    <p>@recipe.Description</p>
+                </div>
             </div>
         }
     </div>
 </section>
 
-<!-- Recent posts -->
+@* Recent posts *@
 <section class="recent">
-    <h2>Latest Creations</h2>
+    <h1>Latest Creations</h1>
     <ul>
         @foreach (var recipe in Model.LatestRecipes)
         {
@@ -43,17 +43,12 @@
     </ul>
 </section>
 
-<!-- About -->
+@* About *@
 <section class="about">
-    <h2>About Me</h2>
+    <h1>About Me</h1>
     <p>
         Welcome to Waltz And Whisk — where I share my passion for cooking, baking, 
         and sharing it with my friends and family. Here, you'll find a combination 
         of recipes that I have made my own through edits and adaptations. 
     </p>
 </section>
-
-
-<div class="text-center">
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
