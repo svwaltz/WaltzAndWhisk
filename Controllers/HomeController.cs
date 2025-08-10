@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore; // for async LINQ queries to the database
  
 namespace WaltzAndWhisk.Controllers;
 
+// HomeController – for the homepage, about page, contact, etc.
 public class HomeController : Controller
 {
     // GET TEST RECIPES -- DUMMY DATA 
@@ -17,7 +18,7 @@ public class HomeController : Controller
             new Recipe
             {
                 Id = 1,
-                Title = "Classic Chocolate Chip Cookies",
+                Title = "Browned Butter Chocolate Chip Cookies",
                 Ingredients = "Flour, Sugar, Butter, Chocolate chips, Eggs",
                 Instructions = "Mix ingredients, bake at 350°F for 12 minutes.",
                 CreatedAt = DateTime.Now.AddDays(-10),

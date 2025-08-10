@@ -7,7 +7,7 @@
     <h1>Waltz and Whisk</h1>
     <p>a dance of flavors and stories from my kitchen to yours</p>
     <!-- button linking to all recipes page -->
-    <a href="/Recipes" class="btn btn-primary">Browse Recipes</a>
+    <a asp-controller="Recipes" asp-action="Index" class="btn btn-primary">Browse Recipes</a>
 </section>
 
 <!-- Featured recipes -->
@@ -19,7 +19,9 @@
         {
             <div class="recipe-card">
                 <img src="@recipe.ImageUrl" alt="@recipe.Title" class="featured-recipe" />
-                <a href="/Recipes/Details/@recipe.Id" > <h3>@recipe.Title</h3> </a>
+                <a asp-controller="Recipes" asp-action="Details" asp-route-id="@recipe.Id">
+                    <h3>@recipe.Title</h3>
+                </a>
                 <p>@recipe.Description</p>
             </div>
         }
@@ -33,7 +35,9 @@
         @foreach (var recipe in Model.LatestRecipes)
         {
             <li>
-                <a href="/Recipes/Details/@recipe.Id">@recipe.Title</a> - @recipe.CreatedAt.ToShortDateString()
+                <a asp-controller="Recipes" asp-action="Details" asp-route-id="@recipe.Id">
+                    @recipe.Title
+                </a> - @recipe.CreatedAt.ToShortDateString()
             </li>
         }
     </ul>
