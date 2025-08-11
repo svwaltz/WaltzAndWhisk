@@ -29,14 +29,36 @@ public class HomeController : Controller
             new Recipe
             {
                 Id = 2,
-                Title = "Spaghetti Carbonara",
+                Title = "Spaghetti Carbonara1",
                 Ingredients = "Spaghetti, Eggs, Pancetta, Parmesan cheese, Black pepper",
                 Instructions = "Cook pasta, mix eggs and cheese, add pancetta, combine all.",
                 CreatedAt = DateTime.Now.AddDays(-7),
                 Description = "Creamy and savory classic Italian pasta.",
                 ImageUrl = "/images/meals/carbonara.jpeg",
-                IsFeatured = false
+                IsFeatured = true
             },
+            new Recipe
+            {
+                Id = 3,
+                Title = "Spaghetti Carbonara2",
+                Ingredients = "Spaghetti, Eggs, Pancetta, Parmesan cheese, Black pepper",
+                Instructions = "Cook pasta, mix eggs and cheese, add pancetta, combine all.",
+                CreatedAt = DateTime.Now.AddDays(-2),
+                Description = "Creamy and savory classic Italian pasta.",
+                ImageUrl = "/images/meals/carbonara.jpeg",
+                IsFeatured = false
+            }, 
+            new Recipe
+            {
+                Id = 4,
+                Title = "Browned Butter Chocolate Chip Cookies 2",
+                Ingredients = "Flour, Sugar, Butter, Chocolate chips, Eggs",
+                Instructions = "Mix ingredients, bake at 350°F for 12 minutes.",
+                CreatedAt = DateTime.Now.AddDays(-10),
+                Description = "Crispy on the outside, chewy on the inside.",
+                ImageUrl = "/images/desserts/chocolatechipcookies.jpeg",
+                IsFeatured = true
+            }
             // add more recipes as needed
         };
     }
@@ -66,8 +88,8 @@ public class HomeController : Controller
             .ToListAsync();*/
 
         var recipes = GetTestRecipes();
-        var featuredRecipes = recipes.Take(2).ToList();
-        var latestRecipes = recipes.OrderByDescending(r => r.CreatedAt).Take(5).ToList();
+        var featuredRecipes = recipes.Where(r => r.IsFeatured).Take(3).ToList();
+        var latestRecipes = recipes.OrderByDescending(r => r.CreatedAt).Take(4).ToList();
 
         var viewModel = new HomeViewModel
         {
