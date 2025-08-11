@@ -1,4 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using WaltzAndWhisk.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// add db context with connection string from appsettings.json
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

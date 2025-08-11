@@ -1,8 +1,66 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home - Waltz and Whisk"; // title that appears in browser tab
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@* Hero (big main) section *@
+<section class="hero-options home-section">
+    <!-- button linking to all recipes page -->
+    <a asp-controller="Recipes" asp-action="Index" class="hero-btn">All Recipes</a>
+    <a asp-controller="Recipes" asp-action="Index" class="hero-btn">Recipes By Category</a>
+    <a asp-controller="Recipes" asp-action="Index" class="hero-btn">Under 30 Minutes</a>
+    <a asp-controller="Recipes" asp-action="Index" class="hero-btn">What Can I Make With...?</a>
+</section>
+
+
+@* Featured recipes *@
+<section class="home-section">
+    <h1>Featured Recipes</h1>
+    <div class="featured-recipe-grid" >
+        @* loop through each recipe in the FeaturedRecipes list passed from controller *@
+        @foreach (var recipe in Model.FeaturedRecipes)
+        {
+            <a asp-controller="Recipes" asp-action="Details" asp-route-id="@recipe.Id">
+            <div class="featured-recipe-card">
+                <img src="@recipe.ImageUrl" alt="@recipe.Title" class="featured-recipe-card-image" />
+                <div class="featured-recipe-card-content">
+                    <h2>@recipe.Title</h2>
+                    <p>@recipe.Description</p>
+                </div>
+            </div>
+            </a>
+        }
+    </div>
+</section>
+
+
+@* Recent posts *@
+<section class="recent home-section">
+    <h1>Latest Creations</h1>
+    <div class="recent-recipe-grid">
+        @foreach (var recipe in Model.LatestRecipes)
+        {
+            <div class="recent-recipe-card">
+                <a asp-controller="Recipes" asp-action="Details" asp-route-id="@recipe.Id" class="recent-recipe-link">
+                    <div class="recent-recipe-img-wrapper">
+                    <img src="@recipe.ImageUrl" class="recent-recipe-img" alt="@recipe.Title" />
+                    <div class="recent-recipe-overlay">
+                        <h3 class="recent-recipe-title">@recipe.Title</h3>
+                        <p class="recent-recipe-date">@recipe.CreatedAt.ToShortDateString()</p>
+                    </div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</section>
+
+
+@* About *@
+<section class="about home-section">
+    <h1>About Me</h1>
+    <p>
+        Welcome to Waltz And Whisk — where I share my passion for cooking, baking, 
+        and sharing it with my friends and family. Here, you'll find a combination 
+        of recipes that I have made my own through edits and adaptations. 
+    </p>
+</section>

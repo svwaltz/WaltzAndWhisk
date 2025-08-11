@@ -1,4 +1,4 @@
-namespace WaltzAndWhisk.Models;
+namespace WaltzAndWhisk.ViewModels;
 
 public class ErrorViewModel
 {
