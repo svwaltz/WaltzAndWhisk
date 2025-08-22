@@ -14,4 +14,9 @@ public class RecipesController : Controller
     {
         return View(id);
     }
+
+    public IActionResult AddRecipe()
+    {
+        return View();
+    }
 }
