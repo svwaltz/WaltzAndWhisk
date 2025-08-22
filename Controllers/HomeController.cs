@@ -10,60 +10,6 @@ namespace WaltzAndWhisk.Controllers;
 // HomeController – for the homepage, about page, contact, etc.
 public class HomeController : Controller
 {
-    // GET TEST RECIPES -- DUMMY DATA 
-    private List<Recipe> GetTestRecipes()
-    {
-        return new List<Recipe>
-        {
-            new Recipe
-            {
-                Id = 1,
-                Title = "Browned Butter Chocolate Chip Cookies",
-                Ingredients = "Flour, Sugar, Butter, Chocolate chips, Eggs",
-                Instructions = "Mix ingredients, bake at 350°F for 12 minutes.",
-                CreatedAt = DateTime.Now.AddDays(-10),
-                Description = "Crispy on the outside, chewy on the inside.",
-                ImageUrl = "/images/desserts/chocolatechipcookies.jpeg",
-                IsFeatured = true
-            },
-            new Recipe
-            {
-                Id = 2,
-                Title = "Spaghetti Carbonara1",
-                Ingredients = "Spaghetti, Eggs, Pancetta, Parmesan cheese, Black pepper",
-                Instructions = "Cook pasta, mix eggs and cheese, add pancetta, combine all.",
-                CreatedAt = DateTime.Now.AddDays(-7),
-                Description = "Creamy and savory classic Italian pasta.",
-                ImageUrl = "/images/meals/carbonara.jpeg",
-                IsFeatured = true
-            },
-            new Recipe
-            {
-                Id = 3,
-                Title = "Spaghetti Carbonara2",
-                Ingredients = "Spaghetti, Eggs, Pancetta, Parmesan cheese, Black pepper",
-                Instructions = "Cook pasta, mix eggs and cheese, add pancetta, combine all.",
-                CreatedAt = DateTime.Now.AddDays(-2),
-                Description = "Creamy and savory classic Italian pasta.",
-                ImageUrl = "/images/meals/carbonara.jpeg",
-                IsFeatured = false
-            }, 
-            new Recipe
-            {
-                Id = 4,
-                Title = "Browned Butter Chocolate Chip Cookies 2",
-                Ingredients = "Flour, Sugar, Butter, Chocolate chips, Eggs",
-                Instructions = "Mix ingredients, bake at 350°F for 12 minutes.",
-                CreatedAt = DateTime.Now.AddDays(-10),
-                Description = "Crispy on the outside, chewy on the inside.",
-                ImageUrl = "/images/desserts/chocolatechipcookies.jpeg",
-                IsFeatured = true
-            }
-            // add more recipes as needed
-        };
-    }
-
-
     private readonly ILogger<HomeController> _logger; // logger for writing info/warnings/errors to app logs
 
     private readonly AppDbContext _context; // db context for querying/saving data
@@ -78,18 +24,14 @@ public class HomeController : Controller
     // homepage
     public async Task<IActionResult> Index()
     {
-        /*var featuredRecipes = await _context.Recipes
+        var featuredRecipes = await _context.Recipes
             .Where(r => r.IsFeatured)  // if you have this property, otherwise filter as needed
             .ToListAsync();
 
         var latestRecipes = await _context.Recipes
-            .OrderByDescending(r => r.CreatedAt)
+            .OrderByDescending(r => r.CreatedDate)
             .Take(5)
-            .ToListAsync();*/
-
-        var recipes = GetTestRecipes();
-        var featuredRecipes = recipes.Where(r => r.IsFeatured).Take(3).ToList();
-        var latestRecipes = recipes.OrderByDescending(r => r.CreatedAt).Take(4).ToList();
+            .ToListAsync();
 
         var viewModel = new HomeViewModel
         {
