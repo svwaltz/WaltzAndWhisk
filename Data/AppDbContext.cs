@@ -5,8 +5,6 @@ namespace WaltzAndWhisk.Data;
 
 public class AppDbContext : DbContext
 {
-
-
     public DbSet<Recipe> Recipes { get; set; }
     public DbSet<Category> Categories { get; set; }
     public DbSet<IngredientsSection> IngredientsSections { get; set; }

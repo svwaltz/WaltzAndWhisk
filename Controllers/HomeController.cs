@@ -2,7 +2,6 @@ using System.Diagnostics; // lets us use Activity for tracking request IDs
 using Microsoft.AspNetCore.Mvc; // base namespace for MVC controllers/views
 using WaltzAndWhisk.ViewModels; // access to our model classes (Recipe, etc.)
 using WaltzAndWhisk.Data; // access to our AppDbContext
-using WaltzAndWhisk.Models; // access to our model classes (Recipe, etc.)
 using Microsoft.EntityFrameworkCore; // for async LINQ queries to the database
  
 namespace WaltzAndWhisk.Controllers;

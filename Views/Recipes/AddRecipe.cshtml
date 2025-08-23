@@ -7,56 +7,130 @@
 <h2>@ViewData["Title"]</h2>
 
 <form asp-action="SaveRecipe" method="post" enctype="multipart/form-data">
-    <div class="form-group">
+    <div class="recipe-form-group">
         <label asp-for="Title"></label>
         <input asp-for="Title" class="form-control" />
         <span asp-validation-for="Title" class="text-danger"></span>
     </div>
 
-    <div class="form-group">
+    <div class="recipe-form-group">
         <label asp-for="Description"></label>
         <textarea asp-for="Description" class="form-control"></textarea>
         <span asp-validation-for="Description" class="text-danger"></span>
     </div>
 
-    <div class="form-group">
+    <div class="recipe-form-group">
         <label asp-for="PrepTimeMinutes">Prep Time (minutes)</label>
         <input asp-for="PrepTimeMinutes" class="form-control" type="number" min="0" />
     </div>
 
-    <div class="form-group">
+    <div class="recipe-form-group">
         <label asp-for="CookTimeMinutes">Cook Time (minutes)</label>
         <input asp-for="CookTimeMinutes" class="form-control" type="number" min="0" />
     </div>
 
-    <div class="form-group">
+    <div class="recipe-form-group">
         <label asp-for="InactiveTimeMinutes">Inactive/Rest Time (minutes)</label>
         <input asp-for="InactiveTimeMinutes" class="form-control" type="number" min="0" />
     </div>
 
-    <div class="form-group">
+    <div class="recipe-form-group">
         <label asp-for="NumServings">Number of Servings</label>
         <input asp-for="NumServings" class="form-control" type="number" min="1" />
     </div>
 
-    <div class="form-group">
+    <div class="recipe-form-group">
         <label asp-for="CategoryId">Category</label>
-        <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories"></select>
+        <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.Categories">
+            <option value="">-- Select a category --</option>
+        </select>
     </div>
 
-    <div class="form-group">
+    <div class="recipe-form-group">
+        <label for="NewCategory">Or add a new category</label>
+        <input type="text" name="newCategory" class="form-control" placeholder="Enter new category name" />
+    </div>
+
+    <div class="recipe-form-group">
+        <label asp-for="CategoryId">Category</label>
+        <select asp-for="CategoryId" class="form-control" id="category-select" asp-items="ViewBag.Categories">
+            <option value="">-- Select a category --</option>
+            <option value="new">-- Add new category --</option>
+        </select>
+    </div>
+
+    <div class="recipe-form-group d-none" id="new-category-input">
+        <label for="NewCategory">New Category</label>
+        <input type="text" name="newCategory" class="form-control" placeholder="Enter new category name" />
+    </div>
+
+
+
+
+
+    <div class="recipe-form-group">
         <label asp-for="IsFeatured">Feature on Homepage</label>
         <input asp-for="IsFeatured" type="checkbox" />
     </div>
 
-    <div class="form-group">
+    <div class="recipe-form-group">
         <label>Recipe Images</label>
         <input type="file" name="Images" multiple class="form-control" />
     </div>
 
+    <div class="recipe-form-group" id="ingredients-section">
+        <label>Ingredients</label>
+        <div id="ingredients-sections-container"></div>
+        <button type="button" class="btn btn-primary" id="add-ingredient-section">Add Ingredient Section</button>
+    </div>
+
+    <div class="recipe-form-group" id="instructions-section">
+        <label>Instructions</label>
+        <div id="instructions-sections-container"></div>
+        <button type="button" class="btn btn-primary" id="add-instruction-section">Add Instruction Section</button>
+    </div>
+
     <button type="submit" class="btn btn-primary">Save Recipe</button>
+
+    <!-- ingredient subsection template -->
+    <div class="ingredient-subsection-template d-none">
+        <div class="ingredient-subsection">
+            <input type="text" name="Ingredients.Subsections[__index__].Title" placeholder="Section Title" class="form-control mb-2"/>
+            <div class="ingredient-items-container"></div>
+            <button type="button" class="btn btn-secondary add-ingredient-item">Add Ingredient</button>
+        </div>
+    </div>
+
+    <!-- ingredient item template -->
+    <div class="ingredient-item-template d-none">
+        <div class="ingredient-item mb-2">
+            <input type="text" name="Ingredients.Subsections[__sindex__].Items[__iindex__].Name" placeholder="Ingredient Name" class="form-control mb-1"/>
+            <input type="number" name="Ingredients.Subsections[__sindex__].Items[__iindex__].Quantity" placeholder="Quantity" class="form-control mb-1"/>
+            <input type="text" name="Ingredients.Subsections[__sindex__].Items[__iindex__].Unit" placeholder="Unit" class="form-control mb-1"/>
+            <input type="text" name="Ingredients.Subsections[__sindex__].Items[__iindex__].Notes" placeholder="Notes" class="form-control mb-1"/>
+        </div>
+    </div>
+
+    <!-- instruction subsection template -->
+    <div class="instruction-subsection-template d-none">
+        <div class="instruction-subsection">
+            <input type="text" name="Instructions.Subsections[__index__].Title" placeholder="Section Title" class="form-control mb-2"/>
+            <div class="instruction-items-container"></div>
+            <button type="button" class="btn btn-secondary add-instruction-step">Add Step</button>
+        </div>
+    </div>
+
+    <!-- instruction step template -->
+    <div class="instruction-step-template d-none">
+        <div class="instruction-step mb-2">
+            <textarea name="Instructions.Subsections[__sindex__].Steps[__iindex__].StepText" placeholder="Instruction Step" class="form-control mb-1"></textarea>
+        </div>
+    </div>
+
 </form>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/addRecipe.js"></script>
 }
+ 
