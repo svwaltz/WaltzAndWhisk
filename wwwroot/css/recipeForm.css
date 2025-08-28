@@ -1,3 +1,7 @@
-div.recipe-form-group {
-    margin-bottom: 15px;
+div.recipe-form-group, div#instructions-sections-container div, div#ingredients-sections-container div {
+    margin-bottom: 10px;
+}
+
+div.ingredient-item {
+    gap: 10px;
 }

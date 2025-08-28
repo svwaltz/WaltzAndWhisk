@@ -33,28 +33,48 @@ public class RecipesController : Controller
 
     public IActionResult AddRecipe()
     {
-        ViewBag.Categories = new SelectList(_context.Categories, "Id", "Name");
+        PopulateViewBagData();
+
         return View("AddRecipe");
     }
 
-    [HttpPost]
-    public async Task<IActionResult> SaveRecipe(Recipe recipe, string? newCategory)
+    private void PopulateViewBagData()
     {
-        // populate categories for the form in case of validation errors
-        ViewBag.Categories = new SelectList(_context.Categories, "Id", "Name");
+        ViewBag.Categories = new List<SelectListItem>
+        {
+            new() { Value = "1", Text = "Breakfast" },
+            new() { Value = "2", Text = "Lunch" },
+            new() { Value = "3", Text = "Dinner" },
+            new() { Value = "4", Text = "Salad" },
+            new() { Value = "5", Text = "Snack" },
+            new() { Value = "6", Text = "Dessert" },
+            new() { Value = "7", Text = "Beverage" },
+            new() { Value = "8", Text = "Other" }
+        };
 
+        ViewBag.Units = new List<SelectListItem>
+        {
+            new() { Value = "cup", Text = "cup" },
+            new() { Value = "tablespoon", Text = "tablespoon" },
+            new() { Value = "teaspoon", Text = "teaspoon" },
+            new() { Value = "gram", Text = "gram" },
+            new() { Value = "kilogram", Text = "kilogram" },
+            new() { Value = "ounce", Text = "ounce" },
+            new() { Value = "pound", Text = "pound" },
+            new() { Value = "milliliter", Text = "milliliter" },
+            new() { Value = "liter", Text = "liter" },
+            new() { Value = "pinch", Text = "pinch" },
+            new() { Value = "dash", Text = "dash" },
+            new() { Value = "piece", Text = "piece" }
+        };
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> SaveRecipe(Recipe recipe)
+    {
         if (!ModelState.IsValid)
         {
             return View("AddRecipe", recipe); // return form with validation messages
-        }
-
-        // handle new category creation
-        if (!string.IsNullOrWhiteSpace(newCategory))
-        {
-            var category = new Category { Name = newCategory };
-            _context.Categories.Add(category);
-            await _context.SaveChangesAsync();
-            recipe.CategoryId = category.Id;
         }
 
         // set timestamps
@@ -67,7 +87,6 @@ public class RecipesController : Controller
 
         // redirect to recipe details or list page
         return RedirectToAction("Details", new { id = recipe.Id });
-
 
         /* Form binding
             your <form> in cshtml posts a Recipe object.
